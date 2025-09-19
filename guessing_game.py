@@ -3,7 +3,6 @@ import main_menu
 
 def guessing_game():
     target = random.randint(1, 100)
-    play = True
     print("Welcome to the Guessing Game!")
     print("I'm thinking of a number between 1 and 100.")
     print("Guess what it is. You have 5 tries: ")
