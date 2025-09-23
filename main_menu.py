@@ -9,7 +9,7 @@ def main():
     if choice == "1":
         guessing_game.guessing_game()
     elif choice == "2":
-        rock_paper_scissors_game.
+        rock_paper_scissors_game.rock_paper_scissors()
     elif choice == "3":
         print("Goodbye!")
         exit()
