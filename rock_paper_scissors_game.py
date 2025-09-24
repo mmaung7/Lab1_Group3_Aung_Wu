@@ -29,6 +29,10 @@ def rock_paper_scissors():
       print('You win!')
     else:
       print('You lose!')
+    again = input('Do you want to play again? (yes/no): ').lower()
+    if again == 'no':
+      main_menu.main()
+      break
       
       
         
