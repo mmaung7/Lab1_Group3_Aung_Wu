@@ -2,6 +2,18 @@ import random
 import main_menu
 
 def guessing_game():
+    """
+    Play a number guessing game (1–100) with 5 attempts.
+
+    The computer randomly picks a target number. 
+    The player has up to 5 tries to guess it. 
+    After each guess, feedback is given whether the guess is too high or too low.
+    If the player guesses correctly, the game ends with a win message.
+    If the player fails after 5 attempts, the correct number is revealed.
+    At the end, the player may choose to play again or return to the main menu.
+
+    Author: Myint Myat Aung
+    """
     target = random.randint(1, 100)
     print("Welcome to the Guessing Game!")
     print("I'm thinking of a number between 1 and 100.")

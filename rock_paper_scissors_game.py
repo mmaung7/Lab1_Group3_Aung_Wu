@@ -2,7 +2,20 @@ import random
 import main_menu
 
 def rock_paper_scissors():
+  """
+  Play a Rock-Paper-Scissors game against the computer.
 
+  The player selects Rock, Paper, or Scissors. 
+  The computer randomly selects its move. 
+  Standard rules decide the winner:
+      - Paper beats Rock
+      - Scissors beat Paper
+      - Rock beats Scissors
+      - Same choice is a draw    
+  After each round, the player can choose to play again or return to the main menu.
+
+  Author: Cheng Hao Wu
+  """
   while True:
     print('Welcome to Rock-Paper-Scissors!')
     print('Choose your move:')
@@ -15,6 +28,9 @@ def rock_paper_scissors():
       if user_choice not in [1, 2, 3]:
         print("Invalid choice. Please enter 1, 2, or 3.")
         continue
+    except ValueError:
+      print("Invalid input. Please enter a number (1, 2, or 3).")
+      continue
 
     comp_choice = random.randint(1, 3)
     choices = {1: 'Paper', 2: 'Scissors', 3: 'Rock'}
@@ -22,7 +38,7 @@ def rock_paper_scissors():
     print(f'Computer chose: {choices[comp_choice]}')
 
     if user_choice == comp_choice:
-      print('It's draw')
+      print("It's draw")
     elif (user_choice == 1 and comp_choice == 3) or \
          (user_choice == 2 and comp_choice == 1) or \
          (user_choice == 3 and comp_choice == 2):
